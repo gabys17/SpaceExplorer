@@ -13,7 +13,7 @@ class Game {
 		400,
 		100,
 		150,
-		"/outerSpaceExplorer/images/alien.gif"
+		"/Imagens/alien.gif"
 	  );
   
 	  //Portal
@@ -23,7 +23,7 @@ class Game {
 		400,
 		300,
 		200,
-		"/outerSpaceExplorer/images/portal.gif"
+		"/Imagens/portal.gif"
 	  );
   
 	  //Human
@@ -33,14 +33,14 @@ class Game {
 		400,
 		100,
 		150,
-		"/outerSpaceExplorer/images/astronaut.gif"
+		"/Imagens/astronaut.gif"
 	  );
   
 	  // Obstacles
 	  this.obstacleImages = [
-		"/outerSpaceExplorer/images/duck.gif",
-		"/outerSpaceExplorer/images/pillow.gif",
-		"/outerSpaceExplorer/images/tequila.gif",
+		"/Imagens/duck.gif",
+		"/Imagens/pillow.gif",
+		"/Imagens/tequila.gif",
 	  ];
 	  this.obstacles = [];
 	  this.isPushingObstacle = false;
@@ -101,7 +101,7 @@ class Game {
 	  for (let i = 0; i < this.obstacles.length; i++) {
 		const obstacle = this.obstacles[i];
 		obstacle.move();
-		humanHovering.play();
+		humanRunning.play();
   
 		if (this.human.didCollide(obstacle)) {
   
@@ -129,7 +129,7 @@ class Game {
 		  if (this.lives === 0) {
 			this.endGame();
 			inGameMusic.pause();
-			humanHovering.pause();
+			humanRunning.pause();
 		  }
 		} else if (obstacle.left < 0) {
 		  obstacle.element.remove(); // Remove the obstacle's
@@ -193,7 +193,7 @@ class Game {
 	  this.victoryScreen.style.display = "block";
   
 	  inGameMusic.pause();
-	  humanHovering.pause();
+	  humanRunning.pause();
 	  victoryMusic.play();
 	}
   
@@ -204,7 +204,7 @@ class Game {
 		obstacle.element.remove();
 		inGameMusic.pause();
 		humanDead.play();
-		humanHovering.pause();
+		humanRunning.pause();
 	  });
   
 	  this.gameIsOver = true;

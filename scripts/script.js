@@ -9,7 +9,7 @@ window.onload = function () {
     const introMusic = document.getElementById("introMusic");
     const alienShooting = document.getElementById("alienShooting");
     const humanDead = document.getElementById("humanDead");
-    const humanHovering = document.getElementById("humanHovering");
+    const humanRunning = document.getElementById("humanRunning");
     const duckVoice = document.getElementsByName("rubberDuck");
     const pillowHit = document.getElementsByName("pillowHit");
     const shotHit = document.getElementsByName("shotHit");
@@ -52,7 +52,7 @@ window.onload = function () {
       startScreen.style.display = "none";      
       creditsScreen.style.display = "block";
       inGameMusic.pause();
-      humanHovering.pause();
+      humanRunning.pause();
     })
 
     const returnButton = document.querySelector(".return-arrow")
@@ -60,7 +60,7 @@ window.onload = function () {
       creditsScreen.style.display = "none";
       startScreen.style.display = "block";
       inGameMusic.pause();
-      humanHovering.pause();//arrumar aqui
+      humanRunning.pause();//arrumar aqui
       restartGame();
     })
 
@@ -112,17 +112,17 @@ window.onload = function () {
                   case "ArrowLeft":
                       game.human.directionX = -8;
                       game.human.facingDirection = "left";
-                      humanHovering.play();//arrumar aqui
+                      humanRunning.play();//arrumar aqui
                       break;
                   case "ArrowRight":
                       game.human.directionX = 8;
                       game.human.facingDirection = "right";
-                      humanHovering.play();
+                      humanRunning.play();
                       break;
                   case "ArrowUp":
                       if (game.human.top > 389){
                         game.human.jump();
-                        humanHovering.play();
+                        humanRunning.play();
                         break;
                       }
                       
@@ -147,11 +147,11 @@ window.onload = function () {
               case "ArrowRight":
                   game.human.directionX = 0;
                   game.human.facingDirection = "idle";
-                  humanHovering.pause();
+                  humanRunning.pause();
                   break;
               case "ArrowUp":
                   game.human.directionY = 0;
-                  humanHovering.pause();
+                  humanRunning.pause();
                   break;
           }
             }

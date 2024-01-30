@@ -15,8 +15,7 @@
         <button id="button-help"></button>
         <button id="button-music-on-off"></button>
         <audio id="introMusic" loop autoplay>
-            <source src="/outerSpaceExplorer/audios/introduction (1).mp3" type="audio/mp3">
-            Your browser does not support the audio element.
+            <source src="/audios/introduction.mp3" type="audio/mp3">
         </audio>
         <div id="helpScreen">
             <h1>Instructions</h1>
@@ -35,7 +34,8 @@
                 <li>You start the game with five lives. 
                 <li>Avoid being shoot by the alien, as each shoot will cost you one life.</li>
                 <li>If you lose all five lives, the game is over.</li>
-                <li>The game has a 120-second timer.</li>
+                <li>The game has a 60-second timer.</li>
+                <li>If you reach the portal you win.</li>
                 <li></li>
             </ul>
 
@@ -48,28 +48,22 @@
         <div id="lives"></div>
         <div id="timer"></div>
         <audio id="inGameMusic" loop>
-            <source id="intro-music" src="/outerSpaceExplorer/audios/Yellow Magic Orchestra “Rydeen“.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
+            <source id="intro-music" src="/audios/Yellow Magic Orchestra “Rydeen“.mp3" type="audio/mp3">
         </audio>
-        <audio id = "humanHovering">
-            <source src="/outerSpaceExplorer/audios/running-sounds-6003.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
+        <audio id = "humanRunning">
+            <source src="/audios/running-sounds-6003.mp3" type="audio/mp3">
         </audio>
         <audio id = "alienShooting" loop>
-            <source src="/outerSpaceExplorer/audios/retro_laser_gun_shot-96367.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
+            <source src="/audios/retro_laser_gun_shot-96367.mp3" type="audio/mp3">
         </audio>
         <audio id = "rubberDuck" loop>
-            <source src="./audios/7HS2REN-duck-quack.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
+            <source src="/audios/7HS2REN-duck-quack.mp3" type="audio/mp3">
         </audio>
         <audio id = "pillowHit">
-            <source src="./audios/_Snore_ Mimimimimimimi Sound Effect (Cartoon Sleeping Sound Effect).mp3" type="audio/mp3">
-            Your browser does not support the audio element.
+            <source src="/audios/_Snore_ Mimimimimimimi Sound Effect (Cartoon Sleeping Sound Effect).mp3" type="audio/mp3">
         </audio>
         <audio id = "shotHit">
-            <source src="./audios/mixkit-glass-break-with-hammer-thud-759.wav" type="audio/mp3">
-            Your browser does not support the audio element.
+            <source src="/audios/mixkit-glass-break-with-hammer-thud-759.wav" type="audio/mp3">
         </audio>
     </section> 
 
@@ -89,16 +83,14 @@
     <section id="gameEndScreen">
         <button class="button-return-startScreen">Back to Menu</button>
         <audio id = "humanDead">
-            <source src="outerSpaceExplorer/audios/gameOver.mp3" type="audio/mp3">
-      Your browser does not support the audio element.
+            <source src="/audios/gameOver.mp3" type="audio/mp3">
         </audio>
     </section>
 
     <section id="victoryScreen">       
         <button class="button-return-startScreen-2">Back to Menu</button>
         <audio id="victoryMusic" loop>
-            <source id="victory-music" src="/outerSpaceExplorer/audios/vitoria 2.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
+            <source id="victory-music" src="/audios/vitoria 2.mp3" type="audio/mp3">
         </audio>
     </section>
 
