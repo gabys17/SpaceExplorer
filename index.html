@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outer Space Traveller</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+    <section id="startScreen">
+		<h1>Outter Space Explorer</h1>
+        <button id="button-start">Start Game</button>
+        <button id="button-credits">Credits</button>
+        <button id="button-help"></button>
+        <button id="button-music-on-off"></button>
+        <audio id="introMusic" loop autoplay>
+            <source src="/outerSpaceExplorer/audios/introduction (1).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="helpScreen">
+            <h1>Instructions</h1>
+            <h3>Objective:</h3>
+            <p>Avoid 5 shoots from the alien and get to the portal to be back safe at home.</p>
+
+            <h3>Controls:</h3>
+            <ul>
+                <li>Arrow Left key to move left</li>
+                <li>Arrow Right key to move right</li>
+                <li>Arrow Up key to jump</li>
+            </ul>
+
+            <h3>Gameplay:</h3>
+            <ul>
+                <li>You start the game with five lives. 
+                <li>Avoid being shoot by the alien, as each shoot will cost you one life.</li>
+                <li>If you lose all five lives, the game is over.</li>
+                <li>The game has a 120-second timer.</li>
+                <li></li>
+            </ul>
+
+
+            <button id="helpScreen-return-button"></button>
+        </div>        
+    </section>
+    
+    <section id="gameScreen">
+        <div id="lives"></div>
+        <div id="timer"></div>
+        <audio id="inGameMusic" loop>
+            <source id="intro-music" src="/outerSpaceExplorer/audios/Yellow Magic Orchestra “Rydeen“.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id = "humanHovering">
+            <source src="/outerSpaceExplorer/audios/running-sounds-6003.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id = "alienShooting" loop>
+            <source src="/outerSpaceExplorer/audios/retro_laser_gun_shot-96367.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id = "rubberDuck" loop>
+            <source src="./audios/7HS2REN-duck-quack.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id = "pillowHit">
+            <source src="./audios/_Snore_ Mimimimimimimi Sound Effect (Cartoon Sleeping Sound Effect).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id = "shotHit">
+            <source src="./audios/mixkit-glass-break-with-hammer-thud-759.wav" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </section> 
+
+    <section id="creditsScreen">       
+        <button class="return-arrow"></button>
+        <div id="credits-logos">
+            <img id="github-image" src="./images/github-image.png" alt="github-image"/>
+            <a class="github-one" href="https://github.com/gabys17" target="_blank"x>Gabriela Silva GitHub</a>
+            <a class="github-two" href="https://github.com/Andr3L4" target="_blank">Andre Rodrigues GitHub</a>
+        <hr class="line1">
+            <img id="linkedin-image" src="./images/linkedin-image.png" alt="linkedin-image"/>
+            <a class="linkedin-one" href="https://www.linkedin.com/in/gabrielavieira-da--silva/" target="_blank">Gabriela Silva</a>
+            <a class="linkedin-two" href="" target="_blank">Andre Rodrigues Linkedin</a>
+        </div>
+    </section>
+
+    <section id="gameEndScreen">
+        <button class="button-return-startScreen">Back to Menu</button>
+        <audio id = "humanDead">
+            <source src="outerSpaceExplorer/audios/gameOver.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section id="victoryScreen">       
+        <button class="button-return-startScreen-2">Back to Menu</button>
+        <audio id="victoryMusic" loop>
+            <source id="victory-music" src="/outerSpaceExplorer/audios/vitoria 2.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <script type="text/javascript" src="./scripts/obstacle.js"></script>
+    <script type="text/javascript" src="./scripts/player.js"></script>
+    <script type="text/javascript" src="./scripts/game.js"></script>
+    <script type="text/javascript" src="./scripts/script.js"></script>
+    
+</body>
+
+</html> 

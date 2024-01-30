@@ -1,0 +1,541 @@
+body {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#startScreen{
+    width: 1280px;
+    height: 575px;
+    background-image: url(/outerSpaceExplorer/images/introBackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#startScreen h1{
+    color: black;
+    font-size: 500%;
+    padding-left: 25%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position:  center;
+    text-align-last: justify;
+}
+
+#helpScreen{
+    display:none;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 5px;    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+}
+
+#helpScreen h1 {
+    font-size: 35px;
+    text-decoration: underline;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#helpScreen h3 {
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#helpScreen p {
+    margin-top: 10px;
+    font-size: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#helpScreen li {
+    list-style-type: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#button-start {
+    color: black;
+    text-transform: uppercase;
+    justify-content: center;
+    width: 25%;
+    height: 80px;
+    border-radius: 5px;
+    margin-top: 20%;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 375px;
+    animation: rotate-scale-down-horizontal 0.4s linear both;
+    cursor: cell;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#button-credits {
+    color:black;
+    text-transform: uppercase;
+    justify-content: center;
+    width: 25%;
+    height: 80px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 375px;
+    animation: rotate-scale-down-horizontal 0.4s linear both;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    cursor: cell;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#button-help{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-image: url(https://i.ibb.co/5TStZ6q/help-image.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius:8px;
+    margin-left: 375px;
+    margin-top: 20px;
+    background-color: white;
+    animation: rotate-scale-down-horizontal 0.4s linear both;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    cursor: cell;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#button-music-on-off{
+    background-image: url(https://i.ibb.co/BBYZvy0/music-on-off.png);
+    background-size: contain;
+    display:flex;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    left: 617px;
+    top: 80px;
+    border-radius: 5px;    
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    cursor: cell;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#helpScreen-return-button{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 8px;
+    background-image: url(https://i.ibb.co/nMybwhD/return-arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: cell;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#gameScreen {
+    display: none;
+    width: 1280px;
+    height: 570px;
+    background-image: url(/outerSpaceExplorer/images/game2backgroung.jpg);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    animation: slide 100s linear infinite, filter 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+    margin: 0 auto;
+    border-radius: 5px;
+    flex-direction: row;    
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#lives {
+    color: black; 
+    height: 50px;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    align-content: center;
+    background-color:grey;
+    text-transform: uppercase;
+    font-size: 25px; 
+    opacity: 70%;
+    margin-left: 375px;
+    margin-top: 20px;
+    border-left: 5px solid black;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#timer {
+    color: black; 
+    height: 50px;
+    width: 40%;
+    display: flex;
+    justify-content: center;  
+    align-content: center;
+    background-color:grey;
+    text-transform: uppercase;
+    font-size: 25px;
+    opacity: 70%;
+    margin-left: 375px;
+    border-left: 5px solid black;
+    border-bottom:5px solid black;
+    border-right: 5px solid black; 
+    border-radius: 5px;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#creditsScreen {
+    background-image: url(https://i.gifer.com/3Ypo.gif);
+    width: 1280px;
+    height: 570px;  
+    display: none;
+    position: relative;
+    background-size: contain;
+    border: 10px dashed rgb(74, 14, 14);
+    border-radius: 5px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#credits-logos{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 220px; 
+    background-color: white;
+    border: 20px dashed rgb(74, 14, 14);
+    border-radius: 75px;    
+    left: 650px;
+    top: 260px;
+    align-items: center;
+    cursor: cell;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#github-image{
+    position: absolute;
+    width: 35px;
+    height: 40px;
+    top: 30px; 
+    left: 10px;     
+}
+
+#linkedin-image{
+    position: absolute;
+    width: 35px;
+    height: 40px;
+    top: 140px; 
+    left: 10px;     
+}
+
+#art-image{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 240px; 
+    left: 10px;
+}
+
+#sounds-image{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 330px; 
+    left: 10px;
+    background-color: transparent;
+}
+
+.github-one {
+    margin-top: 35px;
+    cursor: cell;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.github-two {
+    margin-bottom: 50px;
+    cursor: cell;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.linkedin-one {    
+    cursor: cell;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.linkedin-two {
+    margin-bottom: 50px;
+    cursor: cell;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.art-one {
+    cursor: cell;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.art-two {
+    display: flex;
+    cursor: cell;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+.music-one {
+    display: flex;
+    cursor: cell;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 50px;
+}
+
+.music-two {
+    display: flex;
+    cursor: cell;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+.line1 {
+    position: absolute;
+    width: 80px;
+    border: 1px solid black;
+    border-radius: 15px;
+    top: 100px;
+    left: 130px;
+    opacity: 40%;    
+}
+
+.line2 {
+    position: absolute;
+    width: 80px;
+    border: 1px solid black;
+    border-radius: 15px;
+    top: 200px;
+    left: 130px;
+    opacity: 40%;    
+}
+
+.line3 {
+    position: absolute;
+    width: 80px;
+    border: 1px solid black;
+    border-radius: 15px;
+    top: 300px;
+    left: 130px;
+    opacity: 40%;    
+}
+
+.return-arrow{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 8px;
+    background-image: url(https://i.ibb.co/nMybwhD/return-arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: cell;
+}
+
+#gameEndScreen{
+    background-image: url(/outerSpaceExplorer/images/gameOver.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1280px;
+    height: 570px;  
+    display: none;
+    position: relative;
+    border: 5px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.button-return-startScreen{        
+    color: black;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 60px;
+    border-radius: 5px;
+    margin-top: 10%;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 75px;
+    cursor: cell;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display:flex;
+    left: 675px;
+    top: 370px; 
+    
+}
+
+.button-restart{
+    color: black;
+    text-transform: uppercase;
+    justify-content: center;
+    width: 15%;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 375px;
+    animation: rotate-scale-down-horizontal 0.4s linear both;
+    cursor: cell;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display:flex;
+    left: 675px;
+    top: 305px;
+}
+
+#victoryScreen {
+    background-image: url(/outerSpaceExplorer/images/winScreen.jpg);
+    width: 1280px;
+    height: 570px;  
+    display: none;
+    position: relative;
+    border: 5px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.button-return-startScreen-2{
+    color: black;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 20%;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 375px;
+    animation: rotate-scale-down-horizontal 0.4s linear both;
+    cursor: cell;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display:flex;
+    left: 675px;
+    top: 370px;  
+}
+
+/*This keyframe makes the buttons animate*/
+@keyframes rotate-scale-down-horizontal{
+    0%{
+        transform:scale(1) rotateX(0);
+    } 
+    50% {
+        transform:scale(.5) rotateX(-180deg);
+    }
+    100% {
+        transform:scale(1) rotateX(-360deg);
+    }
+}
+
+/* This keyframe make the background slide to the left*/
+@keyframes slide {
+    0% {
+        background-position: 3840px 0;
+    }
+    100% {
+        background-position: -3840px 0;
+    }
+}
