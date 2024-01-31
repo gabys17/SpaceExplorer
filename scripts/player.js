@@ -40,8 +40,8 @@ class Player {
         }
 
         // Handling the bottom part
-        if (this.top > 450 && this.isJumping) {
-            this.top = 449;
+        if (this.top > 430 && this.isJumping) {
+            this.top = 429;
             this.gravity = 0;
             this.isJumping = false;
         }
@@ -60,6 +60,7 @@ class Player {
         this.element.style.top = `${this.top}px`;
     }
 
+	
     jump(){
         this.gravity = -25;
         this.isJumping = true;
