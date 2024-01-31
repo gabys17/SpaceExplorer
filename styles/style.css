@@ -26,7 +26,7 @@ body {
     color: darkblue;
     font-size: 60px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-left: 35%;    
+    padding-left: 30%;    
 }
 
 #helpScreen{
@@ -69,8 +69,6 @@ body {
 }
 
 #button-start {
-    position:relative;
-    display:inline-block;
     margin:20px;
     color: darkblue;
     text-transform: uppercase;
@@ -83,7 +81,7 @@ body {
     text-decoration:none;
     background-color:#FFA12B;
     display:block;
-    padding:20px 40px;
+    padding:20px 0;
     cursor: cell;
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     position: relative;
@@ -154,42 +152,42 @@ body {
     border-radius: 5px;
 }
 
+.centerButtons{
+    display: flex;
+    align-self: center;
+}
+
 #button-help{
     position: relative;
-    width: 60px;
-    height: 60px;
-    background-image: url(https://i.ibb.co/5TStZ6q/help-image.png);
+    width: 40px;
+    height: 40px;
+    background-image: url(/Imagens/help.png);
     background-size: contain;
     background-repeat: no-repeat;
     border-radius:8px;
-    margin-left: 375px;
-    margin-top: 20px;
-    background-color: white;
+    background-color: #F78900;
     animation: rotate-scale-down-horizontal 0.4s linear both;
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px darkblue;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     cursor: cell;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
 }
 
 #button-music-on-off{
-    background-image: url(https://i.ibb.co/BBYZvy0/music-on-off.png);
+    background-image: url(/Imagens/volume.png);
     background-size: contain;
-    display:flex;
-    position: relative;
-    width: 30px;
-    height: 30px;
-    left: 617px;
-    top: 80px;
+    background-color: #F78900;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px darkblue;
+    width: 40px;
+    height: 40px;
     border-radius: 5px;    
-    position: relative;
-    user-select: none;
-    -webkit-user-select: none;
     touch-action: manipulation;
     cursor: cell;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
 }
 
 #helpScreen-return-button{
