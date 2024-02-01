@@ -47,9 +47,9 @@ class Game {
 
     // Obstacles
     this.obstacleImages = [
-      "./docs/images/duck.gif",
-      "./docs/images/pillow.gif",
-      "./docs/images/tequila.gif",
+      "docs/images/duck.gif",
+      "docs/images/pillow.gif",
+      "docs/images/tequila.gif",
     ];
 
     this.obstacles = [];
