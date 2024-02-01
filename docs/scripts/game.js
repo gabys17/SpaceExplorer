@@ -1,14 +1,14 @@
 class Game {
   constructor() {
     this.startScreen = document.getElementById("startScreen");
-	this.introMusic = document.getElementById("introMusic");
+    this.introMusic = document.getElementById("introMusic");
     this.creditsScreen = document.getElementById("creditsScreen");
     this.gameScreen = document.getElementById("gameScreen");
     this.gameEndScreen = document.getElementById("gameEndScreen");
-	this.inGameMusic = document.getElementById("inGameMusic");
+    this.inGameMusic = document.getElementById("inGameMusic");
     this.victoryScreen = document.getElementById("victoryScreen");
-	this.victoryMusic = document.getElementById("victory-music");
-	this.humanDead = document.getElementById("humanDead");
+    this.victoryMusic = document.getElementById("victory-music");
+    this.humanDead = document.getElementById("humanDead");
     this.duckVoice = document.getElementById("rubberDuck");
     this.pillowHit = document.getElementById("pillowHit");
     this.shotHit = document.getElementById("shotHit");
@@ -20,7 +20,7 @@ class Game {
       400,
       100,
       150,
-      "/Imagens/alien.gif"
+      "/docs/images/alien.gif"
     );
 
     //Portal
@@ -30,7 +30,7 @@ class Game {
       400,
       300,
       200,
-      "/Imagens/portal.gif"
+      "/docs/images/portal.gif"
     );
 
     //Human
@@ -40,15 +40,18 @@ class Game {
       400,
       100,
       150,
-      "/Imagens/astronaut.gif"
+      "/docs/images/astronaut.gif"
     );
+
+    this.playerStop = false;
 
     // Obstacles
     this.obstacleImages = [
-      "/Imagens/duck.gif",
-      "/Imagens/pillow.gif",
-      "/Imagens/tequila.gif",
+      "./docs/images/duck.gif",
+      "./docs/images/pillow.gif",
+      "./docs/images/tequila.gif",
     ];
+
     this.obstacles = [];
     this.isPushingObstacle = false;
 
@@ -70,7 +73,7 @@ class Game {
       timer.innerHTML = `Round time: ${this.timer}`;
     };
 
-/*     setInterval(updateTimer, 1000); */
+    setInterval(updateTimer, 1000);
 
     // Start the game loop
     this.gameLoop();
@@ -79,7 +82,7 @@ class Game {
   gameLoop() {
     // Check if the game is over to interrupt the game loop
     if (this.gameIsOver) {
-/*       this.inGameMusic.pause(); */
+      /*       this.inGameMusic.pause(); */
       return;
     }
 
@@ -91,9 +94,11 @@ class Game {
   update() {
     let lives = document.getElementById("lives");
 
+    if(this.playerStop === false){
     this.human.move();
+    }
 
-	// Loop to Iterate over Objects and Check if they Collided with a Human or Check if They Disappeared from the Background's Limits.
+    // Loop to Iterate over Objects and Check if they Collided with a Human or Check if They Disappeared from the Background's Limits.
 
     for (let i = 0; i < this.obstacles.length; i++) {
       const obstacle = this.obstacles[i];
@@ -104,42 +109,42 @@ class Game {
         this.obstacles.splice(i, 1); // Remove the obstacle in the JS
 
         this.lives--;
-
-        if (obstacle.obstacleImages === "rubberDuck") {
+        if (obstacle.element.src.includes("duck.gif")) {
           this.duckVoice.play();
-        } else if (obstacle.obstacleImages === "pillowHit") {
+        } else if (obstacle.element.src.includes("pillow.gif")) {
           this.pillowHit.play();
-		  this.human.left = 0
-		  this.human.top = 439
-        } else if(obstacle.obstacleImages === "shotHit") {
+          this.playerStop = true;
+          setTimeout(() => {
+            this.playerStop = false;
+          }, 3000)
+        } else if (obstacle.element.src.includes("tequila.gif")) {
           this.shotHit.play();
-		  this.human.directionX -=20;
-		  this.human.directionY += 20
+          this.human.directionX -=100;
+          this.human.directionY = 0;
         }
-
-      } 
-	  
-	  else if (obstacle.left > this.gameScreen.offsetWidth) {
+      } else if (obstacle.left > this.gameScreen.offsetWidth) {
         obstacle.element.remove(); // Remove the obstacle's
         this.obstacles.splice(i, 1);
       }
     }
 
-	// If there are no obstacles and if we're not in the process of pushing obstacles...
-      if (!this.obstacles.length && !this.isPushingObstacle) {
-        this.isPushingObstacle = true;
+    // If there are no obstacles and if we're not in the process of pushing obstacles...
+    if (!this.obstacles.length && !this.isPushingObstacle) {
+      this.isPushingObstacle = true;
 
-        setTimeout(() => {
-          const newObstacle = new ObstacleBottom(
-            this.gameScreen,
-            this.obstacleImages
-          );
-          this.obstacles.push(newObstacle);
-          this.isPushingObstacle = false;
-        }, 2000);
-      }
+      setTimeout(() => {
 
-	// If Human Collides with Portal, we Win.
+        const newObstacle = new ObstacleBottom(
+          this.gameScreen,
+          this.obstacleImages
+
+        );
+        this.obstacles.push(newObstacle);
+        this.isPushingObstacle = false;
+      }, 2000);
+    }
+
+    // If Human Collides with Portal, we Win.
     if (this.human.didCollide(this.portal)) {
       this.victoryGame();
     }
@@ -169,22 +174,6 @@ class Game {
     this.victoryMusic.play();
   }
 
-/*   freeze(){
-	setTimeout(() => {
-		
-		this.human.directionX = 0;
-		this.human.directionY = 0;
-	  }, 3000);
-}
-
-slowDown() {
-	setTimeout(() => {
-		this.human.directionX = -2;
-
-	  }, 3000);
-} */
-
-
   endGame() {
     this.human.element.remove();
     this.portal.element.remove();
@@ -192,7 +181,7 @@ slowDown() {
       obstacle.element.remove();
     });
 
-	this.inGameMusic.pause();
+    this.inGameMusic.pause();
     this.humanDead.play();
 
     this.gameIsOver = true;
