@@ -20,7 +20,7 @@ class Game {
       400,
       100,
       150,
-      "/docs/images/alien.gif"
+      "docs/images/alien.gif"
     );
 
     //Portal
@@ -30,7 +30,7 @@ class Game {
       400,
       300,
       200,
-      "/docs/images/portal.gif"
+      "docs/images/portal.gif"
     );
 
     //Human
@@ -40,7 +40,7 @@ class Game {
       400,
       100,
       150,
-      "/docs/images/astronaut.gif"
+      "docs/images/astronaut.gif"
     );
 
     this.playerStop = false;

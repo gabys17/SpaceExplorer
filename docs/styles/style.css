@@ -10,7 +10,7 @@ body {
 #startScreen{
     width: 1025px;
     height: 575px;
-    background-image: url(/docs/images/introBackground.jpg);
+    background-image: url(docs/images/introBackground.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -156,7 +156,7 @@ body {
     position: relative;
     width: 40px;
     height: 40px;
-    background-image: url(/docs/images/help.png);
+    background-image: url(docs/images/help.png);
     background-size: contain;
     background-repeat: no-repeat;
     border-radius:8px;
@@ -168,7 +168,7 @@ body {
 }
 
 #button-music-on-off{
-    background-image: url(/docs/images/volume.png);
+    background-image: url(docs/images/volume.png);
     background-size: contain;
     background-color: #F78900;
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px darkblue;
@@ -182,7 +182,7 @@ body {
 }
 
 #button-music-on-off:active {
-    background-image: url(/docs/images/volume.png);
+    background-image: url(docs/images/volume.png);
     background-size: contain;
     background-color: #F78900;
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px darkblue;
@@ -201,7 +201,7 @@ body {
     position: absolute;
     bottom: 20px;
     right: 10px;
-    background-image: url(/docs/images/back-button.png);
+    background-image: url(docs/images/back-button.png);
     background-size: contain;
     cursor: cell;
 }
@@ -210,7 +210,7 @@ body {
     display: none;
     width: 1280px;
     height: 570px;
-    background-image: url(/docs/images/game2backgroung.jpg);
+    background-image: url(docs/images/game2backgroung.jpg);
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -438,13 +438,13 @@ body {
     position: absolute;
     bottom: 20px;
     right: 10px;
-    background-image: url(/docs/images/back-button.png);
+    background-image: url(docs/images/back-button.png);
     background-size: contain;
     cursor: cell;
 }
 
 #gameEndScreen{
-    background-image: url(/docs/images/gameOver.gif);
+    background-image: url(docs/images/gameOver.gif);
     background-repeat: no-repeat;
     background-size: contain;
     width: 1280px;
@@ -464,7 +464,7 @@ body {
     position: absolute;
     bottom: 20px;
     right: 10px;
-    background-image: url(/docs/images/back-button.png);
+    background-image: url(docs/images/back-button.png);
     background-size: contain;
     cursor: cell;
     
@@ -495,7 +495,7 @@ body {
 }
 
 #victoryScreen {
-    background-image: url(/docs/images/winScreen.jpg);
+    background-image: url(docs/images/winScreen.jpg);
     width: 1280px;
     height: 570px;  
     display: none;
@@ -516,7 +516,7 @@ body {
     position: absolute;
     bottom: 20px;
     right: 10px;
-    background-image: url(/docs/images/back-button.png);
+    background-image: url(docs/images/back-button.png);
     background-size: contain;
     cursor: cell;
 }
