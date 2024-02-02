@@ -141,7 +141,7 @@ class Game {
         );
         this.obstacles.push(newObstacle);
         this.isPushingObstacle = false;
-      }, 200);
+      }, 800);
     }
 
     // If Human Collides with Portal, we Win.
