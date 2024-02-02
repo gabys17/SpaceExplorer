@@ -496,17 +496,13 @@ body {
 
 #victoryScreen {
     background-image: url(../images/winScreen.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
     width: 1280px;
     height: 570px;  
     display: none;
     position: relative;
-    border: 5px solid black;
-    border-radius: 5px;
     overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 5px;
     margin: 0 auto;
 }
 
